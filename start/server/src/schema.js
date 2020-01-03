@@ -8,6 +8,9 @@ const typeDefs = gql`
     launch(id: ID!): Launch
     # queries for current user:
     me: User
+    # queries for Rocket Type:
+    rocket(id: ID!): Rocket
+    mission: Mission
   }
 
   type Launch {
@@ -22,6 +25,7 @@ const typeDefs = gql`
     id: ID!
     name: String
     type: String
+    unit: String
   }
 
   type User {
